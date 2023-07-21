@@ -1,0 +1,55 @@
+.title_of_part_page_connection {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.formulaire_connection {
+  margin-top: 25px;
+  position: relative;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 365px;
+}
+.formulaire_connection .case_of_form {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.formulaire_connection .connection {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0097a7;
+  color: white;
+}
+.formulaire_connection .connection:active {
+  background-color: #12b0c2;
+  color: white;
+}
+.formulaire_connection .inscription {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a975c8;
+  color: white;
+}
+.formulaire_connection .inscription:active {
+  background-color: rgb(179, 150, 196);
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .formulaire_connection {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=connection.css.map */

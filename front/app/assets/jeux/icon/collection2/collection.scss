@@ -1,0 +1,166 @@
+
+$color_box_border: #8d5d37;
+$color_box_border_not_hover: rgb(0, 0, 0);
+$color_box_red:  #dd342f;
+$color_box_red_black:  #b42521;
+$color_box_green:  #26b899;
+$color_box_green_black:  #1f9074;
+$color_box_green2: #a1d76e;
+$color_box_green2_black:  #8ec35a;
+$color_box_yellow:  #eeb61a;
+$color_box_yellow_black:  #ef891c;
+$color_box_not_hover: rgb(212, 212, 212);
+$color_box_not_hover_black: rgb(121, 121, 121);
+
+.collection{    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-color 0.5s linear;
+    .box-cont{
+      position: relative;
+      width: 100%;
+      height:90%;
+      background-color: white;
+      .box{
+        position: absolute;
+        width: 60%;
+        height: 18%;
+        left :5%;
+        background-color: $color_box_not_hover;
+        transition: background-color 0.5s linear;
+        .top-box{
+          position: absolute;
+          height:100%;
+          width: 10%;
+          left: 10%;
+          background-color: $color_box_not_hover_black;
+          transition: background-color 0.5s linear;
+        }
+        .middle-box{
+          position: absolute;
+          height:10%;
+          width: 50%;
+          left: 25%;
+          top:45%;
+          border-top-right-radius: 3% 50%;
+          border-top-left-radius: 3% 50%;
+          border-bottom-right-radius: 3% 50%;
+          border-bottom-left-radius: 3% 50%;
+          background-color: $color_box_not_hover_black;
+          transition: background-color 0.5s linear;
+        }
+        .bottom-box{
+          position: absolute;
+          height:100%;
+          width: 10%;
+          left: 80%;
+          background-color: $color_box_not_hover_black;
+          transition: background-color 0.5s linear;
+        } 
+      }
+      .box.yellow{
+        bottom:0%;
+      }
+      .box.green{
+        bottom:36%;
+      }
+      .box.green2{
+        bottom:18%;
+        left:2.5%;
+      }
+      .box.red{
+        transform: rotate(70deg);
+        left: 50%;
+        bottom:25.5%;
+      }
+    }
+
+    .rack{
+      transition: background-color 0.5s linear;
+      background-color: $color_box_not_hover_black;
+      width: 100%;
+      height: 10%;
+    }
+  }
+  
+.collection:hover{
+  .box-cont{
+    .box{
+      transition: background-color 0.5s linear;
+      .top-box{
+        transition: background-color 0.5s linear;
+      }
+      .middle-box{
+        transition: background-color 0.5s linear;
+      }
+      .bottom-box{
+        transition: background-color 0.5s linear;
+      } 
+    }
+    .box.yellow{
+      background-color: $color_box_yellow;
+      .bottom-box{
+        background-color: $color_box_yellow_black;
+      }
+      .middle-box{
+        background-color: $color_box_yellow_black;
+      }
+      .top-box{
+        background-color: $color_box_yellow_black;
+      }
+    }
+    .box.green{
+      bottom:36%;
+      background-color: $color_box_green;
+      .bottom-box{
+        background-color: $color_box_green_black;
+      }
+      .middle-box{
+        background-color: $color_box_green_black;
+      }
+      .top-box{
+        background-color: $color_box_green_black;
+      }
+    }
+    .box.green2{
+      background-color: $color_box_green2;
+      .bottom-box{
+        background-color: $color_box_green2_black;
+      }
+      .middle-box{
+        background-color: $color_box_green2_black;
+      }
+      .top-box{
+        background-color: $color_box_green2_black;
+      }
+    }
+    .box.red{
+      background-color: $color_box_red;
+      .bottom-box{
+        background-color: $color_box_red_black;
+      }
+      .middle-box{
+        background-color: $color_box_red_black;
+      }
+      .top-box{
+        background-color: $color_box_red_black;
+      }
+    }
+  }
+  .rack{
+    background-color: $color_box_border;
+    transition: background-color 0.5s linear;
+  }
+}
+ 
+  
+  
+  .icon-jeux {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,72 @@
+$color_card_red : #f05c36;
+$color_card_blue : #74a6a5ff;
+$color_card_green : #888e38ff;
+$color_card_yellow : #dcb244ff;
+$color_card_purple : #a975c8ff;
+$color_card_white:#faf8f1ff;
+
+// body{
+//   background-color: white;
+//   padding-left: 150px;
+//   padding-top: 100px;
+// }
+
+.cont_podium{
+    background-color: white;
+    position: relative;
+    height: 80px;
+    width: 100%;
+
+    .title_podium{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 30%;
+    }
+
+    .cont_part_podium{
+        position: relative;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        height: 70%;
+        .part_podium{
+            position: relative;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            .title_of_part{
+ 
+                text-align: center;
+                padding-bottom: 2px;
+                font-size: 60%;
+            }
+            .block_of_part{
+                
+                color:white;
+                text-align: center;    
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                font-size:100%;
+            }
+            .block_of_part.number_one{
+                background-color: #dcb244ff;
+                height: 70%;
+                
+            }
+            .block_of_part.number_two{
+                background-color: #a975c8ff;
+                height: 50%;
+             
+            }
+            .block_of_part.number_three{
+                background-color: #74a6a5ff;
+                height: 30%;
+       
+            }
+        }
+    }
+}

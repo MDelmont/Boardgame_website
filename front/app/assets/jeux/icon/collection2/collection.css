@@ -1,0 +1,149 @@
+.collection {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color 0.5s linear;
+}
+.collection .box-cont {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  background-color: white;
+}
+.collection .box-cont .box {
+  position: absolute;
+  width: 60%;
+  height: 18%;
+  left: 5%;
+  background-color: rgb(212, 212, 212);
+  transition: background-color 0.5s linear;
+}
+.collection .box-cont .box .top-box {
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  left: 10%;
+  background-color: rgb(121, 121, 121);
+  transition: background-color 0.5s linear;
+}
+.collection .box-cont .box .middle-box {
+  position: absolute;
+  height: 10%;
+  width: 50%;
+  left: 25%;
+  top: 45%;
+  border-top-right-radius: 3% 50%;
+  border-top-left-radius: 3% 50%;
+  border-bottom-right-radius: 3% 50%;
+  border-bottom-left-radius: 3% 50%;
+  background-color: rgb(121, 121, 121);
+  transition: background-color 0.5s linear;
+}
+.collection .box-cont .box .bottom-box {
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  left: 80%;
+  background-color: rgb(121, 121, 121);
+  transition: background-color 0.5s linear;
+}
+.collection .box-cont .box.yellow {
+  bottom: 0%;
+}
+.collection .box-cont .box.green {
+  bottom: 36%;
+}
+.collection .box-cont .box.green2 {
+  bottom: 18%;
+  left: 2.5%;
+}
+.collection .box-cont .box.red {
+  transform: rotate(70deg);
+  left: 50%;
+  bottom: 25.5%;
+}
+.collection .rack {
+  transition: background-color 0.5s linear;
+  background-color: rgb(121, 121, 121);
+  width: 100%;
+  height: 10%;
+}
+
+.collection:hover .box-cont .box {
+  transition: background-color 0.5s linear;
+}
+.collection:hover .box-cont .box .top-box {
+  transition: background-color 0.5s linear;
+}
+.collection:hover .box-cont .box .middle-box {
+  transition: background-color 0.5s linear;
+}
+.collection:hover .box-cont .box .bottom-box {
+  transition: background-color 0.5s linear;
+}
+.collection:hover .box-cont .box.yellow {
+  background-color: #eeb61a;
+}
+.collection:hover .box-cont .box.yellow .bottom-box {
+  background-color: #ef891c;
+}
+.collection:hover .box-cont .box.yellow .middle-box {
+  background-color: #ef891c;
+}
+.collection:hover .box-cont .box.yellow .top-box {
+  background-color: #ef891c;
+}
+.collection:hover .box-cont .box.green {
+  bottom: 36%;
+  background-color: #26b899;
+}
+.collection:hover .box-cont .box.green .bottom-box {
+  background-color: #1f9074;
+}
+.collection:hover .box-cont .box.green .middle-box {
+  background-color: #1f9074;
+}
+.collection:hover .box-cont .box.green .top-box {
+  background-color: #1f9074;
+}
+.collection:hover .box-cont .box.green2 {
+  background-color: #a1d76e;
+}
+.collection:hover .box-cont .box.green2 .bottom-box {
+  background-color: #8ec35a;
+}
+.collection:hover .box-cont .box.green2 .middle-box {
+  background-color: #8ec35a;
+}
+.collection:hover .box-cont .box.green2 .top-box {
+  background-color: #8ec35a;
+}
+.collection:hover .box-cont .box.red {
+  background-color: #dd342f;
+}
+.collection:hover .box-cont .box.red .bottom-box {
+  background-color: #b42521;
+}
+.collection:hover .box-cont .box.red .middle-box {
+  background-color: #b42521;
+}
+.collection:hover .box-cont .box.red .top-box {
+  background-color: #b42521;
+}
+.collection:hover .rack {
+  background-color: #8d5d37;
+  transition: background-color 0.5s linear;
+}
+
+
+
+.icon-jeux {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=collection.css.map */

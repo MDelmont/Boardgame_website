@@ -1,0 +1,60 @@
+.cadre_pieces {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -55%;
+  left: 0%;
+}
+.cadre_pieces .border_pieces:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: -21px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 black;
+}
+.cadre_pieces .border_pieces:after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: -21px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 black;
+}
+.cadre_pieces .border_pieces {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: gold;
+  border-radius: 50%;
+  border: 6px solid black;
+  transition: 0.5s;
+}
+.cadre_pieces .border_pieces .border_pieces_2 {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  background-color: goldenrod;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cadre_pieces .border_pieces .border_pieces_2 .backgoud_pieces {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background-color: #ffe865;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=pieces.css.map */

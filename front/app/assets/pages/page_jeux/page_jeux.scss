@@ -1,0 +1,268 @@
+$colorpage:rgb(255, 255, 255);
+$color_botton : #0097a7ff;
+.page-board-filter{
+    position: relative;
+    left:0%;
+    top:0%;
+    width: 100%;    
+    min-height: 25px;
+    background-color:$colorpage;
+    .title_of_part_page{
+        position: absolute;
+        padding-top:5px;
+        width: 30%;
+        height:100%;
+        font-size:10px;
+        left:0%;
+        
+ 
+    }
+    .finder_with_name{
+        max-height: 25px;
+        position: absolute;
+        height: 70%;
+        width: 55%;
+        top:50%;
+        left:30%;
+        transform: translateY(-50%);
+        border: 1px solid rgb(194, 194, 194);
+        background-color: white;
+        .finder_with_name_input{
+            position: absolute;
+            height: 100%;
+            width: 90%;
+            left:0%;
+            top:0%;
+            background-color: white;
+            border: 0px solid rgba(169, 169, 169, 0);
+        }
+        .loupe_img{
+            position: absolute;
+           
+            right: 0%;
+            height: 100%;
+      
+        }
+    }
+    .see_filter{
+        
+        position: absolute;
+        height:100%;
+        width: 20px;
+        left :90%;
+        .content_icon_see_filter{
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 20%;
+            transition-duration: 0.5s ;
+            .barre_1,.barre_2,.barre_3{
+                transition-duration: 0.5s ;
+                position: relative;
+                background-color: black;
+                width: 80%;
+                height: 7%;
+                left : 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+            }
+            .barre_1{
+                top:40%;
+            }
+            .barre_2{
+                top:50%;
+            }
+            .barre_3{
+                top:60%;
+            }
+        }
+
+
+    }
+    .see_filter.active{
+
+        .content_icon_see_filter{
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            transition-duration: 0.5s ;
+            .barre_1,.barre_2,.barre_3{
+                transition-duration: 0.5s ;
+                position: relative;
+                background-color: black;
+                width: 80%;
+                height: 7%;
+                left : 50%;
+                top:50%;
+    
+
+            }
+            .barre_1{
+                top:48%;
+                left: 50%;
+                height: 1.5px;
+                transform:   translateX(-50%)  translateY(-50%) rotate(-45deg) ;
+                
+            }
+            .barre_2{
+                top: 40%;
+                left: 53%;
+             
+                height: 1.5px;
+                transform:  translateX(-50%)  translateY(-50%) rotate(45deg)   ;
+            }
+            .barre_3{
+                display:None;
+               
+            }
+        }
+    }
+    .see_filter.active + .part_of_filter{
+        transition: 1s;
+        display: Block;
+    }
+    .part_of_filter{
+        display: None;
+        position: absolute;
+        width: 100%;
+        top:100%;
+        transition: 1s;
+        background-color: $colorpage;
+        transition: 1s;
+        .Appliquer_filter_play{
+            position: relative;
+            margin-top:3px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 20%;
+            height : 30px;
+            background-color: #0097a7ff;
+            color:white;
+        }
+        .Appliquer_filter_play:active{
+  
+            background-color: #12b0c2;
+     
+        }
+        .case_of_form{
+        
+            display: grid;
+            grid-template-columns: 30% 70%;
+            padding-top:2px;
+
+            .text_of_case_of_form{
+            height: 100%;
+    
+            }
+            .text_of_case{
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.page-board-display{
+    position: absolute;
+    top:25px;
+    width: 100%;
+    align-content: center;
+    background-color:$colorpage;
+    display: grid;
+    grid-template-columns: 50% 50%;   
+}
+
+@media only screen and (min-width: 768px) {
+
+  
+    .page-board-display{
+        top:0%;
+        position: absolute;
+        left:20%;
+        width: 80%;
+        align-content: center;
+        background-color: $colorpage;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        
+        
+    }
+
+
+    .page-board-filter{
+
+        position: absolute;
+        left:0%;
+        width: 20%;
+        height: 100%;
+     
+        
+        .title_of_part_page{
+            position: relative;
+            text-align: center;
+            height: 25px;
+            width: 100%;
+        }
+        .finder_with_name{
+            position: relative;
+            top:0%;
+            left:50%;
+            width: 80%;
+            transform: translateY(0%) translateX(-50%);
+            
+
+        }
+        .part_of_filter{
+            display: block;
+            position: relative;
+            width: 100%;
+            left: 50%;
+            top: 5%;
+            padding-left: 2px;
+            transform: translateX(-50%);
+            .Appliquer_filter_play{
+                width: 50%;
+
+            }
+            
+            .case_of_form{
+                .text_of_case_of_form{
+                    .text_of_case{
+                        font-size: 9px;
+                    }
+                }
+
+            }
+        }
+        .see_filter{
+            position: relative;
+            top:0%;
+            display:None;
+
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+    .page-board-filter{
+        .case_of_form{
+            .text_of_case_of_form{
+                .text_of_case{
+                    font-size: 12px;
+                }
+            }
+
+        }
+    }
+}

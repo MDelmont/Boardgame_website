@@ -1,0 +1,6 @@
+conf.py
+__pycache__
+.vscode
+text.pysite.html
+docker-compose.yml
+Dockerfile

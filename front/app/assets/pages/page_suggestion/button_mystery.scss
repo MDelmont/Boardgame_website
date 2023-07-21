@@ -1,0 +1,106 @@
+$color_card_red : #f05c36;
+$color_card_blue : #74a6a5ff;
+$color_card_green : #888e38ff;
+$color_card_yellow : #dcb244ff;
+$color_card_purple : #a975c8ff;
+$color_card_white:#faf8f1ff;
+// body{
+//     background-color:rgb(216, 216, 216);
+//     padding-left: 150px;
+//     padding-top: 100px;
+//   }
+.part_of_suggestion{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  .button_mystery_cont{
+
+    position: relative;
+    left:50%;
+    top:40%;
+    width: 80%;
+    height: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    
+    background-color: white;
+    .button_mystery{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+     
+        left:50%;
+        top:50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        width: 80%;
+        height: 20%;
+        text-align: center;
+        justify-content: center;
+        background-color: $color_card_purple;
+        box-shadow: 0 0 0 0 rgba($color_card_purple, .5);
+        -webkit-animation: pulse 1.5s infinite;
+        transition-duration: 0.5s;
+
+        .text{
+            color:white;
+            font-size: 80%;
+            text-transform: uppercase;
+            transition: 0.2s;
+            transition: opacity 0.2s 1s;
+            opacity: 1;
+        }
+    }
+    .button_mystery:hover {
+        transition-duration: 0.5s;
+        -webkit-animation: none;
+        
+        background-color: white;
+        border: 2px solid $color_card_purple;
+
+        .text{
+            color: $color_card_purple;
+      
+            transition-delay: opacity 0.2s 1s;
+            opacity: 1;
+            
+        }
+      }
+    .button_mystery.active {
+        transition: 1s;
+        transition-delay: 0.2s;
+        width: 0%;
+        border: 0px solid $color_card_purple;
+        -webkit-animation: none;
+        .text{
+            transition: 0.2s;
+            opacity: 0;
+        }
+      }
+
+  }
+}
+  @-webkit-keyframes pulse {
+    0% {
+
+    }
+    70% {
+      
+        box-shadow: 0 0 0 50px rgba($color_card_purple, 0);
+    }
+      100% {
+      
+        box-shadow: 0 0 0 0 rgba($color_card_purple, 0);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .part_of_suggestion{
+      .button_mystery_cont{
+        .button_mystery{
+          .text{
+            font-size: 110%;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+.title_of_part_page_Profil {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.formulaire_profil {
+  margin-top: 25px;
+  position: relative;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 365px;
+}
+.formulaire_profil .case_of_form {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.formulaire_profil .Modifier_le_mot_de_passe {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0097a7;
+  color: white;
+}
+.formulaire_profil .Modifier_le_mot_de_passe:active {
+  background-color: #12b0c2;
+  color: white;
+}
+.formulaire_profil .Effacer_ses_donnees {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ea9999;
+  color: white;
+}
+.formulaire_profil .Effacer_ses_donnees:active {
+  background-color: rgb(252, 110, 110);
+}
+.formulaire_profil .Supprimer_le_compte {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #cc0000;
+  color: white;
+}
+.formulaire_profil .Supprimer_le_compte:active {
+  background-color: rgb(248, 24, 24);
+}
+.formulaire_profil .Déconnexion {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+}
+.formulaire_profil .Déconnexion:active {
+  background-color: rgb(207, 12, 12);
+}
+
+.form_modify_password.active {
+  display: block;
+}
+
+.form_modify_password {
+  display: None;
+  top: 0px;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 365px;
+  background-color: white;
+}
+.form_modify_password .close_img_password {
+  position: absolute;
+  width: 25px;
+  right: 0%;
+  top: 0%;
+}
+.form_modify_password .title_of_part_page_Modifier_le_mot_de_passe {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.form_modify_password .case_of_form {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.form_modify_password .Envoyer {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0097a7;
+  color: white;
+}
+.form_modify_password .Envoyer:active {
+  background-color: #12b0c2;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .formulaire_connection {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=page_profil.css.map */

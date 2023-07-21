@@ -1,0 +1,41 @@
+.title_of_part_page_inscription {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.formulaire_inscription {
+  margin-top: 25px;
+  position: relative;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 365px;
+}
+.formulaire_inscription .case_of_form {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.formulaire_inscription .inscription {
+  margin: 15px;
+  position: relative;
+  width: 50%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a975c8;
+  color: white;
+}
+.formulaire_inscription .inscription:active {
+  background-color: rgb(179, 150, 196);
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .formulaire_connection {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=inscription.css.map */

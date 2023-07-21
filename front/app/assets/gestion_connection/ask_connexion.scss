@@ -1,0 +1,75 @@
+$color_connection : #0097a7ff;
+$color_connection_active : #12b0c2;
+$color_inscription : #a975c8ff;
+$color_inscription_active : rgb(179, 150, 196);
+.part_for_ask_connexion_cont{
+    display: None;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+        .close_img{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: 5%;
+            top:5%;
+            .img_board{
+         
+                width: 100%;
+            }
+        }
+    
+
+    .part_for_ask_connexion{
+        width:80%;
+  
+        position:absolute;
+        top:50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .connection{
+            margin-top: 5px;
+            position: relative;
+            width: 30%;
+            background-color: $color_connection;
+            color:white;
+        }
+        .connection:active{
+      
+            background-color: $color_connection_active;
+         
+    
+        }
+        .inscription{
+            margin-top: 5px;
+            position: relative;
+            width: 30%;
+            background-color: $color_inscription;
+            color:white;
+        }
+
+        .inscription:active{
+      
+            background-color: $color_inscription_active;
+      
+    
+        }
+
+    }
+    
+}
+.part_for_ask_connexion_cont.active{
+display: block;
+}
+

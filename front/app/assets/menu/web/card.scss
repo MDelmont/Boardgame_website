@@ -1,0 +1,377 @@
+.navigation_web {
+  top: 0px;
+  display: None;
+  position: absolute;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 108px;
+  width: 100%;
+  transition: 1s;
+}
+
+.scene_1, .scene_2, .scene_3, .scene_4, .scene_5 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  perspective: 207px;
+  transition: 1s;
+}
+
+.scene_1 .card, .scene_2 .card, .scene_3 .card, .scene_4 .card, .scene_5 .card {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  border-radius: 10%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scene_1 .card .card__face, .scene_2 .card .card__face, .scene_3 .card .card__face, .scene_4 .card .card__face, .scene_5 .card .card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 10%;
+  overflow: hidden;
+  background-color: #f05c36;
+  box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.scene_1 .card .card__face .icon, .scene_2 .card .card__face .icon, .scene_3 .card .card__face .icon, .scene_4 .card .card__face .icon, .scene_5 .card .card__face .icon {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.scene_1 .card .card__face .icon .img_icon.front, .scene_2 .card .card__face .icon .img_icon.front, .scene_3 .card .card__face .icon .img_icon.front, .scene_4 .card .card__face .icon .img_icon.front, .scene_5 .card .card__face .icon .img_icon.front {
+  width: 100%;
+}
+
+.scene_1 .card .card__face .text, .scene_2 .card .card__face .text, .scene_3 .card .card__face .text, .scene_4 .card .card__face .text, .scene_5 .card .card__face .text {
+  position: absolute;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #faf8f1;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scene_1 .card .card__face .text.front, .scene_2 .card .card__face .text.front, .scene_3 .card .card__face .text.front, .scene_4 .card .card__face .text.front, .scene_5 .card .card__face .text.front {
+  width: 100%;
+  text-align: center;
+  font-size: 60%;
+}
+
+.scene_1 .card .card__face.card__face--front, .scene_2 .card .card__face.card__face--front, .scene_3 .card .card__face.card__face--front, .scene_4 .card .card__face.card__face--front, .scene_5 .card .card__face.card__face--front {
+  position: absolute;
+}
+
+.scene_1 .card .card__face--back, .scene_2 .card .card__face--back, .scene_3 .card .card__face--back, .scene_4 .card .card__face--back, .scene_5 .card .card__face--back {
+  background-color: #faf8f1;
+  position: relative;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.scene_1 .card .card__face--back .line_border, .scene_2 .card .card__face--back .line_border, .scene_3 .card .card__face--back .line_border, .scene_4 .card .card__face--back .line_border, .scene_5 .card .card__face--back .line_border {
+  padding-top: 6%;
+  position: relative;
+  left: 0%;
+  height: 100%;
+  width: 20%;
+  background-color: #f05c36;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: top;
+}
+
+.scene_1 .card .card__face--back .line_border .number_card, .scene_2 .card .card__face--back .line_border .number_card, .scene_3 .card .card__face--back .line_border .number_card, .scene_4 .card .card__face--back .line_border .number_card, .scene_5 .card .card__face--back .line_border .number_card {
+  color: #faf8f1;
+  font-size: 70%;
+  align-self: center;
+}
+
+.scene_1 .card .card__face--back .line_border .icon_border, .scene_2 .card .card__face--back .line_border .icon_border, .scene_3 .card .card__face--back .line_border .icon_border, .scene_4 .card .card__face--back .line_border .icon_border, .scene_5 .card .card__face--back .line_border .icon_border {
+  position: relative;
+  width: 50%;
+  align-self: center;
+}
+
+.scene_1 .card .card__face--back .line_border .icon_border .img_icon.border, .scene_2 .card .card__face--back .line_border .icon_border .img_icon.border, .scene_3 .card .card__face--back .line_border .icon_border .img_icon.border, .scene_4 .card .card__face--back .line_border .icon_border .img_icon.border, .scene_5 .card .card__face--back .line_border .icon_border .img_icon.border {
+  position: absolute;
+  width: 100%;
+}
+
+.scene_1 .card .card__face--back .line_border_right, .scene_2 .card .card__face--back .line_border_right, .scene_3 .card .card__face--back .line_border_right, .scene_4 .card .card__face--back .line_border_right, .scene_5 .card .card__face--back .line_border_right {
+  padding-top: 6%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 20%;
+  top: 0%;
+  right: 0%;
+  transform: rotate(180deg);
+}
+
+.scene_1 .card .card__face--back .line_border_right .number_card, .scene_2 .card .card__face--back .line_border_right .number_card, .scene_3 .card .card__face--back .line_border_right .number_card, .scene_4 .card .card__face--back .line_border_right .number_card, .scene_5 .card .card__face--back .line_border_right .number_card {
+  color: #f05c36;
+  font-size: 70%;
+  align-self: center;
+}
+
+.scene_1 .card .card__face--back .line_border_right .icon_border, .scene_2 .card .card__face--back .line_border_right .icon_border, .scene_3 .card .card__face--back .line_border_right .icon_border, .scene_4 .card .card__face--back .line_border_right .icon_border, .scene_5 .card .card__face--back .line_border_right .icon_border {
+  position: relative;
+  width: 50%;
+  align-self: center;
+}
+
+.scene_1 .card .card__face--back .line_border_right .icon_border .img_icon.border, .scene_2 .card .card__face--back .line_border_right .icon_border .img_icon.border, .scene_3 .card .card__face--back .line_border_right .icon_border .img_icon.border, .scene_4 .card .card__face--back .line_border_right .icon_border .img_icon.border, .scene_5 .card .card__face--back .line_border_right .icon_border .img_icon.border {
+  position: absolute;
+  width: 100%;
+}
+
+.scene_1 .card .card__face--back .text, .scene_2 .card .card__face--back .text, .scene_3 .card .card__face--back .text, .scene_4 .card .card__face--back .text, .scene_5 .card .card__face--back .text {
+  position: absolute;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f05c36;
+  top: 15%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
+.scene_1 .card .card__face--back .text.back, .scene_2 .card .card__face--back .text.back, .scene_3 .card .card__face--back .text.back, .scene_4 .card .card__face--back .text.back, .scene_5 .card .card__face--back .text.back {
+  width: 100%;
+  left: 55%;
+  text-align: center;
+  font-size: 50%;
+}
+
+.scene_1 .card .card__face--back .icon_back, .scene_2 .card .card__face--back .icon_back, .scene_3 .card .card__face--back .icon_back, .scene_4 .card .card__face--back .icon_back, .scene_5 .card .card__face--back .icon_back {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  height: 30%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+
+.scene_1 .card .card__face--back .icon_back .img_icon.back, .scene_2 .card .card__face--back .icon_back .img_icon.back, .scene_3 .card .card__face--back .icon_back .img_icon.back, .scene_4 .card .card__face--back .icon_back .img_icon.back, .scene_5 .card .card__face--back .icon_back .img_icon.back {
+  width: 100%;
+}
+
+.scene_1 .card .card__face--back .point_num, .scene_2 .card .card__face--back .point_num, .scene_3 .card .card__face--back .point_num, .scene_4 .card .card__face--back .point_num, .scene_5 .card .card__face--back .point_num {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  top: 60%;
+  left: 55%;
+  height: 20%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+
+.scene_1 .card .card__face--back .point_num .point, .scene_2 .card .card__face--back .point_num .point, .scene_3 .card .card__face--back .point_num .point, .scene_4 .card .card__face--back .point_num .point, .scene_5 .card .card__face--back .point_num .point {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: #f05c36;
+  transform: translate(-50%, -50%);
+}
+
+.scene_1 .card .card__face--back .point_num .point .middle_point, .scene_2 .card .card__face--back .point_num .point .middle_point, .scene_3 .card .card__face--back .point_num .point .middle_point, .scene_4 .card .card__face--back .point_num .point .middle_point, .scene_5 .card .card__face--back .point_num .point .middle_point {
+  background-color: #faf8f1;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+}
+
+.scene_1 .red .card__face, .scene_2 .red .card__face, .scene_3 .red .card__face, .scene_4 .red .card__face, .scene_5 .red .card__face {
+  background-color: #f05c36;
+}
+
+.scene_1 .red .card__face--back, .scene_2 .red .card__face--back, .scene_3 .red .card__face--back, .scene_4 .red .card__face--back, .scene_5 .red .card__face--back {
+  background-color: #faf8f1;
+}
+
+.scene_1 .red .card__face--back .line_border, .scene_2 .red .card__face--back .line_border, .scene_3 .red .card__face--back .line_border, .scene_4 .red .card__face--back .line_border, .scene_5 .red .card__face--back .line_border {
+  background-color: #f05c36;
+}
+
+.scene_1 .red .card__face--back .line_border_right .number_card, .scene_2 .red .card__face--back .line_border_right .number_card, .scene_3 .red .card__face--back .line_border_right .number_card, .scene_4 .red .card__face--back .line_border_right .number_card, .scene_5 .red .card__face--back .line_border_right .number_card {
+  color: #f05c36;
+}
+
+.scene_1 .red .card__face--back .text, .scene_2 .red .card__face--back .text, .scene_3 .red .card__face--back .text, .scene_4 .red .card__face--back .text, .scene_5 .red .card__face--back .text {
+  color: #f05c36;
+}
+
+.scene_1 .red .card__face--back .point_num .point, .scene_2 .red .card__face--back .point_num .point, .scene_3 .red .card__face--back .point_num .point, .scene_4 .red .card__face--back .point_num .point, .scene_5 .red .card__face--back .point_num .point {
+  background-color: #f05c36;
+}
+
+.scene_1 .blue .card__face, .scene_2 .blue .card__face, .scene_3 .blue .card__face, .scene_4 .blue .card__face, .scene_5 .blue .card__face {
+  background-color: #74a6a5;
+}
+
+.scene_1 .blue .card__face--back, .scene_2 .blue .card__face--back, .scene_3 .blue .card__face--back, .scene_4 .blue .card__face--back, .scene_5 .blue .card__face--back {
+  background-color: #faf8f1;
+}
+
+.scene_1 .blue .card__face--back .line_border, .scene_2 .blue .card__face--back .line_border, .scene_3 .blue .card__face--back .line_border, .scene_4 .blue .card__face--back .line_border, .scene_5 .blue .card__face--back .line_border {
+  background-color: #74a6a5;
+}
+
+.scene_1 .blue .card__face--back .line_border_right .number_card, .scene_2 .blue .card__face--back .line_border_right .number_card, .scene_3 .blue .card__face--back .line_border_right .number_card, .scene_4 .blue .card__face--back .line_border_right .number_card, .scene_5 .blue .card__face--back .line_border_right .number_card {
+  color: #74a6a5;
+}
+
+.scene_1 .blue .card__face--back .text, .scene_2 .blue .card__face--back .text, .scene_3 .blue .card__face--back .text, .scene_4 .blue .card__face--back .text, .scene_5 .blue .card__face--back .text {
+  color: #74a6a5;
+}
+
+.scene_1 .blue .card__face--back .point_num .point, .scene_2 .blue .card__face--back .point_num .point, .scene_3 .blue .card__face--back .point_num .point, .scene_4 .blue .card__face--back .point_num .point, .scene_5 .blue .card__face--back .point_num .point {
+  background-color: #74a6a5;
+}
+
+.scene_1 .green .card__face, .scene_2 .green .card__face, .scene_3 .green .card__face, .scene_4 .green .card__face, .scene_5 .green .card__face {
+  background-color: #888e38;
+}
+
+.scene_1 .green .card__face--back, .scene_2 .green .card__face--back, .scene_3 .green .card__face--back, .scene_4 .green .card__face--back, .scene_5 .green .card__face--back {
+  background-color: #faf8f1;
+}
+
+.scene_1 .green .card__face--back .line_border, .scene_2 .green .card__face--back .line_border, .scene_3 .green .card__face--back .line_border, .scene_4 .green .card__face--back .line_border, .scene_5 .green .card__face--back .line_border {
+  background-color: #888e38;
+}
+
+.scene_1 .green .card__face--back .line_border_right .number_card, .scene_2 .green .card__face--back .line_border_right .number_card, .scene_3 .green .card__face--back .line_border_right .number_card, .scene_4 .green .card__face--back .line_border_right .number_card, .scene_5 .green .card__face--back .line_border_right .number_card {
+  color: #888e38;
+}
+
+.scene_1 .green .card__face--back .text, .scene_2 .green .card__face--back .text, .scene_3 .green .card__face--back .text, .scene_4 .green .card__face--back .text, .scene_5 .green .card__face--back .text {
+  color: #888e38;
+}
+
+.scene_1 .green .card__face--back .point_num .point, .scene_2 .green .card__face--back .point_num .point, .scene_3 .green .card__face--back .point_num .point, .scene_4 .green .card__face--back .point_num .point, .scene_5 .green .card__face--back .point_num .point {
+  background-color: #888e38;
+}
+
+.scene_1 .yellow .card__face, .scene_2 .yellow .card__face, .scene_3 .yellow .card__face, .scene_4 .yellow .card__face, .scene_5 .yellow .card__face {
+  background-color: #dcb244;
+}
+
+.scene_1 .yellow .card__face--back, .scene_2 .yellow .card__face--back, .scene_3 .yellow .card__face--back, .scene_4 .yellow .card__face--back, .scene_5 .yellow .card__face--back {
+  background-color: #faf8f1;
+}
+
+.scene_1 .yellow .card__face--back .line_border, .scene_2 .yellow .card__face--back .line_border, .scene_3 .yellow .card__face--back .line_border, .scene_4 .yellow .card__face--back .line_border, .scene_5 .yellow .card__face--back .line_border {
+  background-color: #dcb244;
+}
+
+.scene_1 .yellow .card__face--back .line_border_right .number_card, .scene_2 .yellow .card__face--back .line_border_right .number_card, .scene_3 .yellow .card__face--back .line_border_right .number_card, .scene_4 .yellow .card__face--back .line_border_right .number_card, .scene_5 .yellow .card__face--back .line_border_right .number_card {
+  color: #dcb244;
+}
+
+.scene_1 .yellow .card__face--back .text, .scene_2 .yellow .card__face--back .text, .scene_3 .yellow .card__face--back .text, .scene_4 .yellow .card__face--back .text, .scene_5 .yellow .card__face--back .text {
+  color: #dcb244;
+}
+
+.scene_1 .yellow .card__face--back .point_num .point, .scene_2 .yellow .card__face--back .point_num .point, .scene_3 .yellow .card__face--back .point_num .point, .scene_4 .yellow .card__face--back .point_num .point, .scene_5 .yellow .card__face--back .point_num .point {
+  background-color: #dcb244;
+}
+
+.scene_1 .purple .card__face, .scene_2 .purple .card__face, .scene_3 .purple .card__face, .scene_4 .purple .card__face, .scene_5 .purple .card__face {
+  background-color: #a975c8;
+}
+
+.scene_1 .purple .card__face--back, .scene_2 .purple .card__face--back, .scene_3 .purple .card__face--back, .scene_4 .purple .card__face--back, .scene_5 .purple .card__face--back {
+  background-color: #faf8f1;
+}
+
+.scene_1 .purple .card__face--back .line_border, .scene_2 .purple .card__face--back .line_border, .scene_3 .purple .card__face--back .line_border, .scene_4 .purple .card__face--back .line_border, .scene_5 .purple .card__face--back .line_border {
+  background-color: #a975c8;
+}
+
+.scene_1 .purple .card__face--back .line_border_right .number_card, .scene_2 .purple .card__face--back .line_border_right .number_card, .scene_3 .purple .card__face--back .line_border_right .number_card, .scene_4 .purple .card__face--back .line_border_right .number_card, .scene_5 .purple .card__face--back .line_border_right .number_card {
+  color: #a975c8;
+}
+
+.scene_1 .purple .card__face--back .text, .scene_2 .purple .card__face--back .text, .scene_3 .purple .card__face--back .text, .scene_4 .purple .card__face--back .text, .scene_5 .purple .card__face--back .text {
+  color: #a975c8;
+}
+
+.scene_1 .purple .card__face--back .point_num .point, .scene_2 .purple .card__face--back .point_num .point, .scene_3 .purple .card__face--back .point_num .point, .scene_4 .purple .card__face--back .point_num .point, .scene_5 .purple .card__face--back .point_num .point {
+  background-color: #a975c8;
+}
+
+.poche {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: white;
+  bottom: -9px;
+  box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.048);
+}
+
+.poche.poche_back {
+  transition-delay: 0.21s;
+  opacity: 0;
+}
+
+.poche.poche_front {
+  transition-property: opacity;
+  transition-delay: 0.21s;
+}
+
+.scene_1.active > .card, .scene_2.active > .card, .scene_3.active > .card, .scene_4.active > .card, .scene_5.active > .card {
+  transform: translateY(-3px) rotateX(-180deg) translateX(-50%);
+}
+
+.scene_1.active > .poche_back, .scene_2.active > .poche_back, .scene_3.active > .poche_back, .scene_4.active > .poche_back, .scene_5.active > .poche_back {
+  opacity: 1;
+}
+
+.scene_1.active > .poche_front, .scene_2.active > .poche_front, .scene_3.active > .poche_front, .scene_4.active > .poche_front, .scene_5.active > .poche_front {
+  opacity: 0;
+}
+
+.scene_1:hover > .card, .scene_2:hover > .card, .scene_3:hover > .card, .scene_4:hover > .card, .scene_5:hover > .card {
+  transition: transform 0.5s;
+  transform: rotateY(10deg) translateY(-3px) translateX(-50%);
+}
+
+.scene_1:hover.active > .card, .scene_2:hover.active > .card, .scene_3:hover.active > .card, .scene_4:hover.active > .card, .scene_5:hover.active > .card {
+  transform: translateY(-3px) rotateX(-180deg) translateX(-50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .navigation_web {
+    display: flex;
+    transition: 1s;
+  }
+}
+/*# sourceMappingURL=card.scss.map */
+
+/*# sourceMappingURL=card.scss.map */

@@ -1,0 +1,54 @@
+
+$color_connection : #0097a7ff;
+$color_connection_active : #12b0c2;
+$color_inscription : #a975c8ff;
+$color_inscription_active : rgb(179, 150, 196);
+
+.title_of_part_page_inscription{
+    padding-top : 20px;
+
+    text-align: center;
+    width: 100%;
+}
+
+.formulaire_inscription{
+    margin-top: 25px;
+    position: relative;
+    width: 90%;
+    left:50%;
+    transform: translateX(-50%);
+    max-width: 365px;
+   
+    .case_of_form{
+
+        margin: 15px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+   
+    }
+
+    .inscription{
+        margin: 15px;
+        position: relative;
+        width: 50%;
+        height : 30px;
+        left:50%;
+        transform: translateX(-50%);
+        background-color: $color_inscription;
+        color:white;
+
+    }
+    .inscription:active{
+      
+        background-color: $color_inscription_active;
+        color:white;
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .formulaire_connection{
+        width: 50%;
+    }
+}

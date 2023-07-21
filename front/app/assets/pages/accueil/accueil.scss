@@ -1,0 +1,102 @@
+$color_card_red : #f05c36;
+$color_card_blue : #74a6a5ff;
+$color_card_green : #888e38ff;
+$color_card_yellow : #dcb244ff;
+$color_card_purple : #a975c8ff;
+$color_card_white:#faf8f1ff;
+.title_of_part_page{
+    text-align: center;
+}
+.paragraphe_of_part_page{
+    padding-top: 3px;
+}
+
+.page-home-use-website{
+    padding-top: 10px;
+
+}
+.content_cercle_of_home{
+    display: None;
+}
+
+.page_home_part_of_list_like,.page_home_part_of_collection,.page_home_part_of_more{
+    padding-top:5px;
+    margin-top: 25px;
+    position: relative;
+    height : 300px;
+    max-width: 1000px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgb(236, 236, 236);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.185);
+}
+
+.page_home_add_board_in_collection,.page_home_of_list_like,.page_home_of_more{
+
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .content_cercle_of_home{
+        display: grid;
+        position: absolute;
+        width: 70%;
+        height:  80%;
+        
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        .cercle_home{
+         
+            height: 35px;
+            width: 35px;
+            border-radius: 50% ;
+
+        }
+        .cercle_home.red{
+            background-color: $color_card_red;
+        }
+        .cercle_home.blue{
+            background-color: $color_card_blue;
+
+        }
+        .cercle_home.yellow{
+            background-color: $color_card_yellow;
+
+        }
+    }
+    .content_cercle_of_home.red{
+        top: 15%;
+        left:7%;
+    }
+    .content_cercle_of_home.yellow,.content_cercle_of_home.blue{
+        top: 15%;
+        left:32%;
+    }
+    .block_color.yellow{
+        position: absolute;
+        left: 5%;
+   
+        transform: translateX(0%);
+    }
+    .page_home_description_of_like,.page_home_description_of_more{
+        position: absolute;
+        top:40%;
+        width: 40%;
+        left: 40%;
+    }
+    .block_color.red{
+        position: absolute;
+        left: 70%;
+        transform: translateX(0%);
+    }
+    .page_home_description_of_collection{
+        position: absolute;
+        top:40%;
+        width: 40%;
+        left: 15%;
+    }
+    .block_color.blue{
+        position: absolute;
+        left: 5%;
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,317 @@
+body {
+  background-color: white;
+}
+
+.navigation_web {
+  display: Flex;
+  position: absolute;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  width: 100%;
+}
+
+.scene {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  perspective: 460px;
+}
+.scene .card {
+  position: relative;
+  width: 72.5%;
+  height: 100%;
+  border-radius: 10%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scene .card .card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 10%;
+  overflow: hidden;
+  background-color: rgb(240, 92, 54);
+  box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.4);
+}
+.scene .card .card__face .icon {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  transform: translate(-50%, -40%);
+}
+.scene .card .card__face .icon .img_icon.front {
+  width: 100%;
+}
+.scene .card .card__face .text {
+  position: absolute;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #faf8f1;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scene .card .card__face .text.front {
+  font-size: 110%;
+}
+.scene .card .card__face.card__face--front {
+  position: absolute;
+}
+.scene .card .card__face--back {
+  background-color: #faf8f1;
+  position: relative;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.scene .card .card__face--back .line_border {
+  padding-top: 6%;
+  position: relative;
+  left: 0%;
+  height: 100%;
+  width: 20%;
+  background-color: rgb(240, 92, 54);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: top;
+}
+.scene .card .card__face--back .line_border .number_card {
+  color: #faf8f1;
+  size: 100%;
+  align-self: center;
+}
+.scene .card .card__face--back .line_border .icon_border {
+  position: relative;
+  width: 50%;
+  align-self: center;
+}
+.scene .card .card__face--back .line_border .icon_border .img_icon.border {
+  position: absolute;
+  width: 100%;
+}
+.scene .card .card__face--back .line_border_right {
+  padding-top: 6%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 20%;
+  top: 0%;
+  right: 0%;
+  transform: rotate(180deg);
+}
+.scene .card .card__face--back .line_border_right .number_card {
+  color: rgb(240, 92, 54);
+  size: 100%;
+  align-self: center;
+}
+.scene .card .card__face--back .line_border_right .icon_border {
+  position: relative;
+  width: 50%;
+  align-self: center;
+}
+.scene .card .card__face--back .line_border_right .icon_border .img_icon.border {
+  position: absolute;
+  width: 100%;
+}
+.scene .card .card__face--back .text {
+  position: absolute;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(240, 92, 54);
+  top: 15%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+.scene .card .card__face--back .text.front {
+  font-size: 110%;
+}
+.scene .card .card__face--back .icon_back {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  height: 30%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+.scene .card .card__face--back .icon_back .img_icon.back {
+  width: 100%;
+}
+.scene .card .card__face--back .point_num {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  top: 60%;
+  left: 55%;
+  height: 20%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+.scene .card .card__face--back .point_num .point {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(240, 92, 54);
+  transform: translate(-50%, -50%);
+}
+.scene .card .card__face--back .point_num .point .middle_point {
+  background-color: #faf8f1;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+}
+
+.red .card .card__face {
+  background-color: rgb(240, 92, 54);
+}
+.red .card .card__face--back {
+  background-color: #faf8f1;
+}
+.red .card .card__face--back .line_border {
+  background-color: rgb(240, 92, 54);
+}
+.red .card .card__face--back .line_border_right .number_card {
+  color: rgb(240, 92, 54);
+}
+.red .card .card__face--back .text {
+  color: rgb(240, 92, 54);
+}
+.red .card .card__face--back .point_num .point {
+  background-color: rgb(240, 92, 54);
+}
+
+.blue .card .card__face {
+  background-color: #74a6a5;
+}
+.blue .card .card__face--back {
+  background-color: #faf8f1;
+}
+.blue .card .card__face--back .line_border {
+  background-color: #74a6a5;
+}
+.blue .card .card__face--back .line_border_right .number_card {
+  color: #74a6a5;
+}
+.blue .card .card__face--back .text {
+  color: #74a6a5;
+}
+.blue .card .card__face--back .point_num .point {
+  background-color: #74a6a5;
+}
+
+.green .card .card__face {
+  background-color: #888e38;
+}
+.green .card .card__face--back {
+  background-color: #faf8f1;
+}
+.green .card .card__face--back .line_border {
+  background-color: #888e38;
+}
+.green .card .card__face--back .line_border_right .number_card {
+  color: #888e38;
+}
+.green .card .card__face--back .text {
+  color: #888e38;
+}
+.green .card .card__face--back .point_num .point {
+  background-color: #888e38;
+}
+
+.yellow .card .card__face {
+  background-color: #dcb244;
+}
+.yellow .card .card__face--back {
+  background-color: #faf8f1;
+}
+.yellow .card .card__face--back .line_border {
+  background-color: #dcb244;
+}
+.yellow .card .card__face--back .line_border_right .number_card {
+  color: #dcb244;
+}
+.yellow .card .card__face--back .text {
+  color: #dcb244;
+}
+.yellow .card .card__face--back .point_num .point {
+  background-color: #dcb244;
+}
+
+.purple .card .card__face {
+  background-color: #a975c8;
+}
+.purple .card .card__face--back {
+  background-color: #faf8f1;
+}
+.purple .card .card__face--back .line_border {
+  background-color: #a975c8;
+}
+.purple .card .card__face--back .line_border_right .number_card {
+  color: #a975c8;
+}
+.purple .card .card__face--back .text {
+  color: #a975c8;
+}
+.purple .card .card__face--back .point_num .point {
+  background-color: #a975c8;
+}
+
+.poche {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: white;
+  bottom: -10px;
+  box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.048);
+}
+
+.poche.poche_back {
+  transition-delay: 0.21s;
+  opacity: 0;
+}
+
+.poche.poche_front {
+  transition-property: opacity;
+  transition-delay: 0.21s;
+}
+
+.scene.active > .card {
+  transform: translateY(-3px) rotateX(-180deg) translateX(-50%);
+}
+
+.scene.active > .poche_back {
+  opacity: 1;
+}
+
+.scene.active > .poche_front {
+  opacity: 0;
+}
+
+.scene:hover > .card {
+  transition: transform 0.5s;
+  transform: rotateY(10deg) translateY(-3px) translateX(-50%);
+}
+
+.scene:hover.active > .card {
+  transform: translateY(-3px) rotateX(-180deg) translateX(-50%);
+}
+
+/*# sourceMappingURL=card.css.map */

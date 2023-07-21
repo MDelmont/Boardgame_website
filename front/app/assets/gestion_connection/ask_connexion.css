@@ -1,0 +1,58 @@
+.part_for_ask_connexion_cont {
+  display: None;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.part_for_ask_connexion_cont .close_img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 5%;
+  top: 5%;
+}
+.part_for_ask_connexion_cont .close_img .img_board {
+  width: 100%;
+}
+.part_for_ask_connexion_cont .part_for_ask_connexion {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.part_for_ask_connexion_cont .part_for_ask_connexion .connection {
+  margin-top: 5px;
+  position: relative;
+  width: 30%;
+  background-color: #0097a7;
+  color: white;
+}
+.part_for_ask_connexion_cont .part_for_ask_connexion .connection:active {
+  background-color: #12b0c2;
+}
+.part_for_ask_connexion_cont .part_for_ask_connexion .inscription {
+  margin-top: 5px;
+  position: relative;
+  width: 30%;
+  background-color: #a975c8;
+  color: white;
+}
+.part_for_ask_connexion_cont .part_for_ask_connexion .inscription:active {
+  background-color: rgb(179, 150, 196);
+}
+
+.part_for_ask_connexion_cont.active {
+  display: block;
+}
+
+/*# sourceMappingURL=ask_connexion.css.map */

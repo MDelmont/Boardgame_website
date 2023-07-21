@@ -1,0 +1,53 @@
+.cont_podium {
+  background-color: white;
+  position: relative;
+  height: 80px;
+  width: 100%;
+}
+.cont_podium .title_podium {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+}
+.cont_podium .cont_part_podium {
+  position: relative;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: 70%;
+}
+.cont_podium .cont_part_podium .part_podium {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.cont_podium .cont_part_podium .part_podium .title_of_part {
+  text-align: center;
+  padding-bottom: 2px;
+  font-size: 60%;
+}
+.cont_podium .cont_part_podium .part_podium .block_of_part {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 100%;
+}
+.cont_podium .cont_part_podium .part_podium .block_of_part.number_one {
+  background-color: #dcb244;
+  height: 70%;
+}
+.cont_podium .cont_part_podium .part_podium .block_of_part.number_two {
+  background-color: #a975c8;
+  height: 50%;
+}
+.cont_podium .cont_part_podium .part_podium .block_of_part.number_three {
+  background-color: #74a6a5;
+  height: 30%;
+}
+
+/*# sourceMappingURL=podium.css.map */

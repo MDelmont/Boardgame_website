@@ -1,0 +1,694 @@
+$colorhave:#888e38ff;
+$colorwish:#a975c8ff;
+
+$color_card_red : #f05c36;
+$color_card_blue : #74a6a5ff;
+$color_card_green : #888e38ff;
+$color_card_yellow : #dcb244ff;
+$color_card_purple : #a975c8ff;
+$color_card_white:#faf8f1ff;
+
+$font_red:#f05c36;
+$font_blue : #4a86e8;
+$font_green : #38761d;
+$bacgourd_font_color:#f3f3f3ff;
+
+$color-heart : rgb(218, 0, 0);
+$color-heart-sad : rgb(212, 212, 212);
+
+$color_box_border: #8d5d37;
+$color_box_border_not_hover: rgb(0, 0, 0);
+$color_box_red:  #dd342f;
+$color_box_red_black:  #b42521;
+$color_box_green:  #26b899;
+$color_box_green_black:  #1f9074;
+$color_box_green2: #a1d76e;
+$color_box_green2_black:  #8ec35a;
+$color_box_yellow:  #eeb61a;
+$color_box_yellow_black:  #ef891c;
+$color_box_not_hover: rgb(212, 212, 212);
+$color_box_not_hover_black: rgb(121, 121, 121);
+
+$time_for_animation:10s;
+$size-boardgame: 150px;
+// body{
+//   background-color: $bacgourd_font_color;
+//   padding-left: 150px;
+//   padding-top: 100px;
+// }
+.block_color.red{
+  background-color: $font_red;
+}
+.block_color.yellow{
+  background-color: $color_card_yellow;
+}
+.block_color.blue{
+  background-color: $color_card_blue;
+}
+.block_color{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left:50%;
+  transform: translateX(-50%);
+  
+  .img_cursor.heart_action{
+    position: absolute;
+    width:5%;
+    left:95%;
+    top:0%;
+    opacity: 0;
+    animation: heart_animation_cursor $time_for_animation  ease-in 0s infinite;
+    .cursor_img{
+      width: 100%;
+
+    }
+    @keyframes heart_animation_cursor {
+      0%{
+        left:95%;
+        top:0%;
+        opacity: 0;
+      }
+      10%{
+        opacity: 1;
+      }
+      25%{
+        left:32%;
+        top: 80% ;
+      }
+      40%{
+        opacity: 1;
+      }
+      50%{
+        left:95%;
+        top:0%;
+        opacity:0;
+      }
+      60%{
+        opacity: 1;
+      }
+      75%{
+        left:32%;
+        top: 80% ;
+      }
+      90%{
+        opacity:1;
+      }
+      100%{
+        left:95%;
+        top:0%;
+        opacity:0;
+      }
+    }
+    
+  }
+  .img_cursor.more_action{
+    position: absolute;
+    width:5%;
+    left:95%;
+    top:0%;
+    opacity: 0;
+    animation: more_animation_cursor $time_for_animation  ease-in 0s infinite;
+    .cursor_img{
+      width: 100%;
+
+    }
+    @keyframes more_animation_cursor {
+      0%{
+        left:95%;
+        top:0%;
+        opacity: 0;
+      }
+      10%{
+        opacity: 1;
+      }
+      25%{
+        left:50%;
+        top: 80% ;
+      }
+      40%{
+        opacity: 1;
+      }
+      50%{
+        left:95%;
+        top:0%;
+        opacity:0;
+      }
+      60%{
+        opacity: 1;
+      }
+      75%{
+        left:50%;
+        top: 80% ;
+      }
+      90%{
+        opacity:1;
+      }
+      100%{
+        left:95%;
+        top:0%;
+        opacity:0;
+      }
+    }
+    
+  }
+  .img_cursor.collection_action{
+    position: absolute;
+    width:5%;
+    left:5%;
+    top:0%;
+    opacity: 0;
+    animation: collection_animation_cursor $time_for_animation  ease-in 0s infinite;
+    .cursor_img{
+      width: 100%;
+
+    }
+    @keyframes collection_animation_cursor {
+      0%{
+        left:5%;
+        top:0%;
+        opacity: 0;
+      }
+      10%{
+        opacity: 1;
+      }
+      25%{
+        left:68%;
+        top: 80% ;
+      }
+      40%{
+        opacity: 1;
+      }
+      50%{
+        left:5%;
+        top:0%;
+        opacity:0;
+      }
+      60%{
+        opacity: 1;
+      }
+      75%{
+        left:68%;
+        top: 80% ;
+      }
+      90%{
+        opacity:1;
+      }
+      100%{
+        left:5%;
+        top:0%;
+        opacity:0;
+      }
+    }
+    
+  }
+  
+  
+
+  .boardgame{
+      position: absolute;
+      background-color: white;
+      height:$size-boardgame ;
+      width: $size-boardgame*0.75;
+      box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 5%;
+      margin:2px;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      .title_boardgame{
+          position: absolute;
+          text-align: center;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          font-size:60%;
+          top:3%;
+          left:50%;
+          transform: translateX(-50%);
+      }
+
+      .img_board_cont{
+        position: absolute;
+          width: 95%;
+          height: 50%;
+          top:12%;
+          left:50%;
+          transform: translateX(-50%);
+          
+          .img_board{
+              top:0%;
+              object-position: -0% -0%;
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+          }
+      }
+      .cont_info_board{
+          position: relative;
+          display: flex;
+          justify-content:space-between;
+          width: 95%;
+          
+          height:14%;
+          left:2.5%;
+          top:65%;
+      
+          .info_board{
+            
+              position: relative;
+              display: grid;
+              grid: 100%;
+              background-color: $bacgourd_font_color;
+              width: 30%;
+              height:100%;
+              
+              .info_board_age, .info_board_mesure, .info_board_nbplayers, .info_board_minutes{
+                  position: relative;
+                  padding-top: 2px;
+                  text-align: center;
+                  
+                  font-family:Verdana, Geneva, Tahoma, sans-serif;
+                  font-size: 30%;
+
+              }
+              .info_board_mesure{
+                  font-size: 20%;
+              }
+              .info_board_age{
+                font-weight: 600;
+                color:$font_red;
+              
+              }
+              .info_board_nbplayers{
+                font-weight: 600;
+                color:$font_blue;
+              }
+              .info_board_minutes{
+                font-weight: 600;
+                color:$font_green;
+              }
+          }
+      }
+
+      .icon_board_cont{
+          position: absolute;
+          display: flex;
+          justify-content:space-around;
+          width: 95%;
+          
+          height:12%;
+          left:2.5%;
+          top:85%;
+      
+          .icon_board{
+      
+              width: 15px;
+              height:15px;
+              .heart {
+                  
+                  width: 50%;
+                  height: 50%;
+                  position: relative;
+                  left: 15%;
+                  top:40%;
+                  transform: rotate(45deg)  ;
+                
+                  background-color: $color-heart-sad ;
+                  transition: background-color 0.5s linear;
+                  
+                  &::before, &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-heart-sad ;
+                    position: absolute;
+                    border-radius: 50%;
+                    transition: background-color 0.5s linear;
+                  }
+                  
+                  &::before {
+                    left: -50%;
+  
+                  }
+                  
+                  &::after {
+                    top: -50%;
+      
+                  }
+                }
+
+                .heart.active{
+                  animation: heart_animation $time_for_animation  ease-in 0s infinite;
+                  
+                  &::before {
+                
+                    animation: heart_animation $time_for_animation  ease-in 0s infinite;
+                  }
+                  
+                  &::after {
+             
+                    animation: heart_animation $time_for_animation  ease-in 0s infinite;
+                  }
+                }
+              @keyframes heart_animation {
+                24%{background-color: $color-heart-sad;}
+                26%{background-color: $color-heart;}
+                74%{background-color: $color-heart;}
+                76%{background-color: $color-heart-sad;
+                }
+                
+              }
+          
+           
+                .collection_home{    
+                  width: 15px;
+                  height: 15px;
+                  position: absolute;
+                  transition: background-color 0.5s linear;
+                  .box-cont{
+                    position: relative;
+                    width: 100%;
+                    height:90%;
+                    background-color: white;
+                    .box{
+                      position: absolute;
+                      width: 60%;
+                      height: 18%;
+                      left :5%;
+                      background-color: $color_box_not_hover;
+                      transition: background-color 0.5s linear;
+                      .top-box{
+                        position: absolute;
+                        height:100%;
+                        width: 10%;
+                        left: 10%;
+                        background-color: $color_box_not_hover_black;
+                        transition: background-color 0.5s linear;
+                      }
+                      .middle-box{
+                        position: absolute;
+                        height:10%;
+                        width: 50%;
+                        left: 25%;
+                        top:45%;
+                        border-top-right-radius: 3% 50%;
+                        border-top-left-radius: 3% 50%;
+                        border-bottom-right-radius: 3% 50%;
+                        border-bottom-left-radius: 3% 50%;
+                        background-color: $color_box_not_hover_black;
+                        transition: background-color 0.5s linear;
+                      }
+                      .bottom-box{
+                        position: absolute;
+                        height:100%;
+                        width: 10%;
+                        left: 80%;
+                        background-color: $color_box_not_hover_black;
+                        transition: background-color 0.5s linear;
+                      } 
+                    }
+                    .box.yellow{
+                      bottom:0%;
+                    }
+                    .box.green{
+                      bottom:36%;
+                    }
+                    .box.green2{
+                      bottom:18%;
+                      left:2.5%;
+                    }
+                    .box.red{
+                      transform: rotate(70deg);
+                      left: 50%;
+                      bottom:25.5%;
+                    }
+                  }
+              
+                  .rack{
+                    transition: background-color 0.5s linear;
+                    background-color: $color_box_not_hover_black;
+                    width: 100%;
+                    height: 10%;
+                  }
+                }
+                
+              .collection_home.active{
+                .box-cont{
+                  
+                  .box.yellow{
+                    animation: collection_yellow_animation $time_for_animation  ease-in 0s infinite;
+                
+                    .bottom-box{
+                      animation: collection_yellow_black_animation $time_for_animation  ease-in 0s infinite;
+           
+                    }
+                    .middle-box{
+                      animation: collection_yellow_black_animation $time_for_animation  ease-in 0s infinite;
+           
+                    }
+                    .top-box{
+                      animation: collection_yellow_black_animation $time_for_animation  ease-in 0s infinite;
+                 
+                    }
+                  }
+                  .box.green{
+                    bottom:36%;
+                    animation: collection_geen_animation $time_for_animation  ease-in 0s infinite;
+            
+                    .bottom-box{
+                      animation: collection_green_black_animation $time_for_animation  ease-in 0s infinite;
+            
+                    }
+                    .middle-box{
+                      animation: collection_green_black_animation $time_for_animation  ease-in 0s infinite;
+                  
+                    }
+                    .top-box{
+                      animation: collection_green_black_animation $time_for_animation  ease-in 0s infinite;
+         
+                    }
+                  }
+                  .box.green2{
+                    animation: collection_geen2_animation $time_for_animation  ease-in 0s infinite;
+            
+                    .bottom-box{
+                      animation: collection_green2_black_animation $time_for_animation  ease-in 0s infinite;
+        
+                    }
+                    .middle-box{
+                      animation: collection_green2_black_animation $time_for_animation  ease-in 0s infinite;
+             
+                    }
+                    .top-box{
+                      animation: collection_green2_black_animation $time_for_animation  ease-in 0s infinite;
+       
+                    }
+                  }
+                  .box.red{
+                    animation: collection_red_animation $time_for_animation  ease-in 0s infinite;
+        
+                    .bottom-box{
+                      animation: collection_red_black_animation $time_for_animation  ease-in 0s infinite;
+          
+                    }
+                    .middle-box{
+                      animation: collection_red_black_animation $time_for_animation  ease-in 0s infinite;
+                 
+                    }
+                    .top-box{
+                      animation: collection_red_black_animation $time_for_animation  ease-in 0s infinite;
+               
+                    }
+                  }
+                }
+                .rack{
+                  animation: collection_rack_animation $time_for_animation  ease-in 0s infinite;
+                  background-color: $color_box_border;
+                  transition: background-color 0.5s linear;
+                }
+              }
+              @keyframes collection_rack_animation {
+                24%{background-color: $color_box_not_hover_black;}
+                26%{background-color: $color_box_border;}
+                74%{background-color: $color_box_border;}
+                76%{background-color: $color_box_not_hover_black;
+                } 
+              }
+
+              @keyframes collection_yellow_animation {
+                24%{background-color: $color_box_not_hover;}
+                26%{background-color: $color_box_yellow;}
+                74%{background-color: $color_box_yellow;}
+                76%{background-color: $color_box_not_hover;
+                } 
+              }
+              @keyframes collection_yellow_black_animation {
+                24%{background-color: $color_box_not_hover_black;}
+                26%{background-color: $color_box_yellow_black;}
+                74%{background-color: $color_box_yellow_black;}
+                76%{background-color: $color_box_not_hover_black;
+                } 
+              }
+              @keyframes collection_geen_animation {
+                24%{background-color: $color_box_not_hover;}
+                26%{background-color: $color_box_green;}
+                74%{background-color: $color_box_green;}
+                76%{background-color: $color_box_not_hover;
+                } 
+              }
+              @keyframes collection_green_black_animation {
+                24%{background-color: $color_box_not_hover_black;}
+                26%{background-color: $color_box_green_black;}
+                74%{background-color: $color_box_green_black;}
+                76%{background-color: $color_box_not_hover_black;
+                } 
+              }
+              @keyframes collection_geen2_animation {
+                24%{background-color: $color_box_not_hover;}
+                26%{background-color: $color_box_green2;}
+                74%{background-color: $color_box_green2;}
+                76%{background-color: $color_box_not_hover;
+                } 
+              }
+              @keyframes collection_green2_black_animation {
+                24%{background-color: $color_box_not_hover_black;}
+                26%{background-color: $color_box_green2_black;}
+                74%{background-color: $color_box_green2_black;}
+                76%{background-color: $color_box_not_hover_black;
+                } 
+              }
+              @keyframes collection_red_animation {
+                24%{background-color: $color_box_not_hover;}
+                26%{background-color: $color_box_red;}
+                74%{background-color: $color_box_red;}
+                76%{background-color: $color_box_not_hover;
+                } 
+              }
+              @keyframes collection_red_black_animation {
+                24%{background-color: $color_box_not_hover_black;}
+                26%{background-color: $color_box_red_black;}
+                74%{background-color: $color_box_red_black;}
+                76%{background-color: $color_box_not_hover_black;
+                } 
+              }
+          }
+      }
+  }
+}
+
+.more-icon_home.active{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+      .barre_one{
+          position: absolute;
+          background-color: black;
+          height: 5%;
+          width: 85%;
+          top:50%;
+          left:50%;
+          transform: translateX(-50%) translateY(-50%);
+          transition-duration: 0.5s;
+          animation: more_barre_one_animation_transition $time_for_animation  ease-in 0s infinite;
+      }
+  
+      .barre_two{
+          position: absolute;
+          background-color: black;
+          height: 85%;
+          width: 5%;
+          top:50%;
+          left:50%;
+          transform: translateX(-50%) translateY(-50%);
+          transition-duration: 0.5s;
+          animation: more_barre_two_animation_transition $time_for_animation  ease-in 0s infinite;
+      }
+      
+  }
+
+  @keyframes more_barre_one_animation_transition {
+                24%{position: absolute;
+                  background-color: black;
+                  height: 5%;
+                  width: 85%;
+                  top:50%;
+                  left:50%;
+                  transform: translateX(-50%) translateY(-50%);
+                  transition-duration: 0.5s;}
+                26%{position: absolute;
+                  background-color: black;
+                  height: 5%;
+                  width: 60%;
+                  top:60%;
+                  left:30%;
+                  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                  transition-duration: 0.5s;}
+                74%{position: absolute;
+                  background-color: black;
+                  height: 5%;
+                  width: 60%;
+                  top:60%;
+                  left:30%;
+                  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                  transition-duration: 0.5s;}
+                76%{position: absolute;
+                  background-color: black;
+                  height: 5%;
+                  width: 85%;
+                  top:50%;
+                  left:50%;
+                  transform: translateX(-50%) translateY(-50%);
+                  transition-duration: 0.5s;
+                } 
+  }
+  @keyframes more_barre_two_animation_transition {
+    24%{      position: absolute;
+      background-color: black;
+      height: 85%;
+      width: 5%;
+      top:50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition-duration: 0.5s;}
+    26%{  position: absolute;
+      background-color: black;
+      height: 60%;
+      width: 5%;
+      top:60%;
+      left:70%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transition-duration: 0.5s;}
+    74%{  position: absolute;
+      background-color: black;
+      height: 60%;
+      width: 5%;
+      top:60%;
+      left:70%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transition-duration: 0.5s;}
+    76%{      position: absolute;
+      background-color: black;
+      height: 85%;
+      width: 5%;
+      top:50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition-duration: 0.5s;
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+  $size-boardgame: 190px;
+  .block_color{
+
+    height: 250px;
+    width: 250px;
+
+    .boardgame{
+      height:$size-boardgame ;
+      width: $size-boardgame*0.75;
+    }
+  }
+  
+}
